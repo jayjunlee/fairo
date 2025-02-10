@@ -1,4 +1,4 @@
-name: polymetis-local
+name: polymetis
 channels:
   - pytorch
   - fair-robotics
