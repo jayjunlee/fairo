@@ -11,6 +11,7 @@ if __name__ == "__main__":
     # Initialize robot interface
     robot = RobotInterface(
         ip_address="192.168.1.67",
+        enforce_version=False
     )
 
     # Reset

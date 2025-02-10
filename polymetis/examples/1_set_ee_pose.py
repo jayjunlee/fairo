@@ -11,10 +11,11 @@ if __name__ == "__main__":
     # Initialize robot interface
     robot = RobotInterface(
         ip_address="192.168.1.67",
+        enforce_version=False
     )
 
     # Reset
-    robot.go_home()
+    # robot.go_home()
 
     # Get ee pose
     ee_pos, ee_quat = robot.get_ee_pose()
@@ -25,7 +26,7 @@ if __name__ == "__main__":
     ee_pos_desired = torch.Tensor([0.5, 0.0, 0.4])
     print(f"\nMoving ee pos to: {ee_pos_desired} ...\n")
     state_log = robot.move_to_ee_pose(
-        position=ee_pos_desired, orientation=None, time_to_go=2.0
+        position=ee_pos_desired, orientation=None, time_to_go=3.0
     )
 
     # Get updated ee pose
