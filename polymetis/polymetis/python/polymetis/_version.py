@@ -23,11 +23,13 @@ else:
 
     # Git describe output
     stream = os.popen("git describe --tags")
-    version_string = [line for line in stream][0]
+    # version_string = [line for line in stream][0]
+    version_string = '0.2'
 
     # Modify to same format as conda env variable GIT_DESCRIBE_NUMBER
     version_items = version_string.strip("\n").split("-")
-    __version__ = f"{version_items[-2]}_{version_items[-1]}"
+    # __version__ = f"{version_items[-2]}_{version_items[-1]}"
+    __version__ = "0.2"
 
     # Reset cwd
     os.chdir(original_cwd)
