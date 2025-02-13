@@ -7,6 +7,7 @@ import threading
 import queue
 
 import grpc
+import time
 
 import polymetis_pb2
 import polymetis_pb2_grpc
@@ -32,6 +33,7 @@ class GripperInterface:
 
         # Get metadata
         try:
+            # time.sleep(3)
             self.metadata = self.grpc_connection.GetRobotClientMetadata(EMPTY)
         except grpc.RpcError:
             log.warning("Metadata unavailable from server.")
